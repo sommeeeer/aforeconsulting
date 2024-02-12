@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/raleway';
 import '@fontsource-variable/inter';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -14,13 +15,44 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={title} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="keywords"
+      content="Afore Consulting AS, Norwegian Consulting Company, Afore, Consulting, Company, Norway, Norwegian, IT, Technology, Business, Development, Software, Solutions, Services, Digital, Transformation, Innovation, Strategy, Management, Consulting, Consultancy, Consult, Consultation, Consultations, Consultancies, Consultancies"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="en_US" />
+    <meta charset="utf-8" />
+    <meta property="og:site_name" content="Afore Consulting AS" />
+    <meta
+      property="og:title"
+      content="Afore Consulting AS, Norwegian Consulting Company"
+    />
+    <meta
+      property="og:description"
+      content="Afore Consulting AS, Norwegian Consulting Company"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aforeconsulting.com" />
+    <meta
+      property="og:image"
+      content="https://aforeconsulting.com/image003.png"
+    />
+    <meta property="og:image:alt" content="Afore Consulting AS logo" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="625" />
+    <meta property="og:image:height" content="308" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -72,5 +104,14 @@ const { title } = Astro.props;
   #root,
   #__next {
     isolation: isolate;
+  }
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
   }
 </style>

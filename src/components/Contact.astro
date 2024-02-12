@@ -43,6 +43,8 @@ import Heading from './Heading.astro';
       padding: 6rem 2rem;
       gap: 4rem;
       color: var(--logo-gray-color);
+      max-width: 800px;
+      margin-inline: auto;
     }
 
     p {
@@ -96,6 +98,12 @@ import Heading from './Heading.astro';
     .phone-link:focus .icon,
     .email-link:focus .icon {
       scale: 1.1;
+    }
+
+    @media screen and (min-width: 800px) {
+      p, h5, a {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </section>
