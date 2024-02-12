@@ -1,0 +1,68 @@
+---
+
+---
+
+<section class="hero">
+  <div class="hero-middle">
+    <img class="hero-logo" src="image003.png" alt="Afore Consulting AS Logo" />
+    <h1 class="hero-title">We are senior project managers and consultants</h1>
+    <a class="hero-button" href="#blue">Learn More</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .hero-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    text-align: center;
+  }
+  .hero-button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--logo-blue-color);
+    padding: 0.8em 1em;
+    letter-spacing: 0.6px;
+    font-family: 'Inter Variable', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  .hero-button:hover,
+  .hero-btn:focus {
+    background-color: var(--logo-blue-hover-color);
+    outline: none;
+  }
+
+  @media screen and (min-width: 400px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .hero-logo {
+      width: 240px;
+    }
+
+    .hero-middle {
+      gap: 3rem;
+    }
+  }
+</style>

@@ -1,0 +1,64 @@
+---
+import Reference from '../components/Reference.astro';
+const references = [
+  {
+    name: 'Vegar Bøthun CIO',
+    content:
+      'Afore Consulting AS was instrumental to executing the almost impossible deadlines of the IT separation of Statoil Fuel & Retail ASA from Statoil ASA',
+  },
+  {
+    name: 'Trond Ellefsen, CIO office Statoil ASA',
+    content:
+      'When executing the Statoil Hydro merger Afore Consulting saved us tens of millions by exceptional project execution - and we delivered on time!',
+  },
+];
+---
+
+<section class="references">
+  <h3>References</h3>
+  <ul>
+    {
+      references.map((ref) => (
+        <Reference name={ref.name} content={ref.content} />
+      ))
+    }
+  </ul>
+</section>
+<style>
+  .references {
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: var(--logo-gray-color);
+  }
+
+  h3::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color: var(--logo-gray-color);
+    margin-inline: auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 4rem;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 800px) {
+    ul {
+      flex-direction: row;
+      gap: 8rem;
+    }
+  }
+</style>
