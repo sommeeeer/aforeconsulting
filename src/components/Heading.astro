@@ -1,0 +1,25 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<h3>{text}</h3>
+<style>
+  h3 {
+    font-size: 2rem;
+    color: var(--logo-gray-color);
+    letter-spacing: 1.8px;
+  }
+
+  h3::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color: var(--logo-gray-color);
+    margin-inline: auto;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Reference from '../components/Reference.astro';
+import Heading from './Heading.astro';
 const references = [
   {
     name: 'Vegar Bøthun CIO',
@@ -15,7 +16,7 @@ const references = [
 ---
 
 <section class="references">
-  <h3>References</h3>
+  <Heading text="References" />
   <ul>
     {
       references.map((ref) => (
@@ -26,27 +27,12 @@ const references = [
 </section>
 <style>
   .references {
-    padding: 6rem 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 6rem 2rem;
     gap: 4rem;
   }
-
-  h3 {
-    font-size: 2rem;
-    color: var(--logo-gray-color);
-  }
-
-  h3::after {
-    content: '';
-    display: block;
-    width: 40%;
-    height: 2px;
-    background-color: var(--logo-gray-color);
-    margin-inline: auto;
-  }
-
   ul {
     display: flex;
     flex-direction: column;
